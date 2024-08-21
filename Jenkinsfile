@@ -9,7 +9,7 @@ pipeline {
 
             stage('Atualização do index') {
                 steps {
-                    sh 'cp -R /var/lib/jenkins/workspace/Ambiente_Teste/* /var/www/html/'
+                    sh 'cp -R /var/lib/jenkins/workspace/Ambiente_Teste/app /var/www/html/'
                 }
             }
 
