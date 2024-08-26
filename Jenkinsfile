@@ -5,7 +5,7 @@ pipeline {
             stage ('Backup e Att do Site') {
                 steps {
                     //Backup
-                    powershell 'copy C:/inetpub/wwwroot/app/* C:/Users/vagrant/Documents/bkp/app_${BUILD_ID}'
+                    powershell 'copy C:/inetpub/wwwroot/app/* C:/Users/vagrant/Documents/bkp/app'
                     //Atualização
                     powershell 'copy C:/data/jenkins_home/workspace/jenkins_file/* C:/inetpub/wwwroot/app/'
                 }
