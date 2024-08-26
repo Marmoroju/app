@@ -4,6 +4,7 @@ pipeline {
         stages  {
             stage ('Atualizacao do Site') {
                 steps {
+                    powershell 'copy C:/inetpub/wwwroot/app C:/Users/vagrant/Documents/bkp/'
                     // As barras devem ser alteradas para ficarem dessa forma
                     powershell 'copy C:/data/jenkins_home/workspace/jenkins_file/* C:/inetpub/wwwroot/app/'
                 }
