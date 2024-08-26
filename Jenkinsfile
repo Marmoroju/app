@@ -7,6 +7,12 @@ pipeline {
                     git 'https://github.com/Marmoroju/app.git'
                 }
             }
+
+            stage ('copia') {
+                steps {
+                    powershell 'copy C:\Users\vagrant\Documents\teste.txt C:\Users\vagrant\Downloads\'
+                }
+            }
         }
 } 
 
