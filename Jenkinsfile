@@ -5,7 +5,7 @@ pipeline {
             stages {
             stage('Backup da pasta atual') {
                 steps { 
-                    powershell 'copy C:/inetpub/wwwroot/app/ C:/Users/vagrant/Documents/bkp_${BUILD_ID}'
+                    powershell 'copy C:/inetpub/wwwroot/app/ C:/Users/vagrant/Documents/bkp/backup__${BUILD_ID}'
                 }
             }
             stage ('Atualizacao do Site') {
