@@ -2,7 +2,13 @@
 pipeline {
     agent any
         stages  {
-            stage ('copia git') {
+            stages {
+            stage('Backup da pasta atual') {
+                steps { 
+                    powershell 'copy C:/inetpub/wwwroot/app/ C:/Users/vagrant/Documents/bkp_${BUILD_ID}'
+                }
+            }
+            stage ('Atualizacao do Site') {
                 steps {
                     // As barras devem ser alteradas para ficarem dessa forma
                     powershell 'copy C:/data/jenkins_home/workspace/jenkins_file/* C:/inetpub/wwwroot/app/'
