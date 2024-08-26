@@ -7,12 +7,14 @@ pipeline {
                     git 'https://github.com/Marmoroju/app.git'
                 }
             }
-
-            stage ('copia') {
+                        
+            stage ('copia git') {
                 steps {
-                    powershell 'copy C:/Users/vagrant/Documents/teste.txt C:/Users/vagrant/Downloads/'
+                    // As barras devem ser alteradas para ficarem dessa forma
+                    powershell 'copy C:/data/jenkins_home/workspace/jenkins_file/ C:/inetpub/wwwroot/app'
                 }
             }
+
         }
 } 
 
