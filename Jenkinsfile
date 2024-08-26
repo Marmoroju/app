@@ -2,12 +2,6 @@
 pipeline {
     agent any
         stages  {
-            stages {
-            stage('Backup da pasta atual') {
-                steps { 
-                    powershell 'copy C:/inetpub/wwwroot/app/ C:/Users/vagrant/Documents/bkp/'
-                }
-            }
             stage ('Atualizacao do Site') {
                 steps {
                     // As barras devem ser alteradas para ficarem dessa forma
