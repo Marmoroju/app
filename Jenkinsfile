@@ -10,7 +10,7 @@ pipeline {
 
             stage ('copia') {
                 steps {
-                    powershell 'copy C:\Users\vagrant\Documents\teste.txt C:\Users\vagrant\Downloads\'
+                    powershell 'copy C:/Users/vagrant/Documents/teste.txt C:/Users/vagrant/Downloads/'
                 }
             }
         }
