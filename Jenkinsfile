@@ -7,7 +7,7 @@ pipeline {
                     //Backup
                     powershell 'Copy-Item -Path C:/inetpub/wwwroot/app/* C:/Users/vagrant/Documents/bkp/app -recurse -ErrorAction SilentlyContinue'
                     //Atualização
-                    powershell 'Copy-Item -Path C:/data/jenkins_home/workspace/build/* C:/inetpub/wwwroot/app/'
+                    powershell 'Copy-Item -Path C:/data/jenkins_home/workspace/build/* C:/inetpub/wwwroot/app/ -recurse -ErrorAction SilentlyContinue'
                  }
             }
 
