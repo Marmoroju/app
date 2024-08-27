@@ -5,7 +5,7 @@ pipeline {
             stage ('Backup e Att do Site') {
                 steps {
                     //Backup
-                    powershell 'Copy-Item -Path C:/inetpub/wwwroot/app/* C:/Users/vagrant/Documents/bkp/app${BUILD_ID} -recurse -ErrorAction SilentlyContinue'
+                    powershell 'Copy-Item -Path C:/inetpub/wwwroot/app/* C:/Users/vagrant/Documents/bkp/app -recurse -ErrorAction SilentlyContinue'
                     //Atualização
                     powershell 'Copy-Item -Path C:/data/jenkins_home/workspace/build/* C:/inetpub/wwwroot/app/ -recurse -ErrorAction SilentlyContinue'
                  }
