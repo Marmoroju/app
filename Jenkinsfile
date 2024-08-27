@@ -7,10 +7,8 @@ pipeline {
                     //Backup
                     powershell 'copy C:/inetpub/wwwroot/app/* C:/Users/vagrant/Documents/bkp/app -recurse -ErrorAction SilentlyContinue'
                     //Atualização
-                    powershell 'copy C:/data/jenkins_home/workspace/build/* C:/inetpub/wwwroot/app/'
-                    //Atualização
-                    powershell 'copy C:/data/jenkins_home/workspace/build/assets/* C:/inetpub/wwwroot/app/'
-                }
+                    powershell 'copy C:/data/jenkins_home/workspace/build/ C:/inetpub/wwwroot/app/'
+                 }
             }
 
         }
